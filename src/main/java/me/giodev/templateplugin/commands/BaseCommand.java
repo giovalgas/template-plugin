@@ -17,8 +17,8 @@ import java.util.List;
 
 public abstract class BaseCommand extends BukkitCommand implements TabCompleter {
 
-  public HashMap<String, SubCommand> subcommands = new HashMap<>();
-  public TemplatePlugin plugin;
+  protected HashMap<String, SubCommand> subcommands = new HashMap<>();
+  protected TemplatePlugin plugin;
 
   public BaseCommand(String name, TemplatePlugin plugin) {
     super(name);
@@ -26,6 +26,7 @@ public abstract class BaseCommand extends BukkitCommand implements TabCompleter 
     this.description = getDescription();
     this.usageMessage = getUsage();
     this.setAliases(getAliases());
+    this.setPermission(getPermission());
   }
 
   @Override
@@ -46,6 +47,8 @@ public abstract class BaseCommand extends BukkitCommand implements TabCompleter 
   public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
     return null;
   }
+
+  public abstract @NotNull String getPermission();
 
   public abstract @NotNull String getUsage();
 

@@ -2,7 +2,8 @@ package me.giodev.templateplugin.commands.templatecommand;
 
 import me.giodev.templateplugin.TemplatePlugin;
 import me.giodev.templateplugin.commands.BaseCommand;
-import me.giodev.templateplugin.commands.templatecommand.subcommands.TestCommand;
+import me.giodev.templateplugin.commands.templatecommand.subcommands.TestSubCommand;
+import me.giodev.templateplugin.data.permissions.Permission;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
@@ -12,12 +13,17 @@ public class TemplatePluginCommand extends BaseCommand {
 
   public TemplatePluginCommand(TemplatePlugin plugin) {
     super("tpcommand", plugin);
-    subcommands.put("TEST", new TestCommand());
+    subcommands.put("TEST", new TestSubCommand());
   }
 
   @Override
   public void executeStockSubCommand(CommandSender sender) {
     plugin.getLog().info("executing stock command!");
+  }
+
+  @Override
+  public @NotNull String getPermission() {
+    return Permission.TPCOMMAND;
   }
 
   @Override
