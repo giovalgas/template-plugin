@@ -12,9 +12,10 @@ import java.util.List;
 public class TemplatePluginCommand extends BaseCommand {
 
   public TemplatePluginCommand(TemplatePlugin plugin) {
-    super("tpcommand", plugin);
-    subcommands.put("TEST", new TestSubCommand());
+    super(plugin);
+    subCommands.put("TEST", new TestSubCommand());
   }
+
 
   @Override
   public void executeStockSubCommand(CommandSender sender) {
@@ -27,17 +28,13 @@ public class TemplatePluginCommand extends BaseCommand {
   }
 
   @Override
-  public @NotNull String getUsage() {
-    return "/tpcommand <args>";
+  public @NotNull String getName() {
+    return "tpcommand";
   }
+
 
   @Override
   public @NotNull List<String> getAliases() { return Arrays.asList(new String[]{"tpcmd"}.clone()); }
-
-  @Override
-  public @NotNull String getDescription() {
-    return "Template Command";
-  }
 
   @Override
   public boolean isPlayerOnly() {
