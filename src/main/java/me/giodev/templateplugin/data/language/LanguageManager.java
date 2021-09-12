@@ -8,6 +8,9 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class LanguageManager {
 
@@ -65,10 +68,39 @@ public class LanguageManager {
     }
   }
 
+  @SuppressWarnings("unchecked")
+  public String[] getStringList(String p, String[] defaultList) throws InvalidConfigurationException {
+    if (langFileConfig.isList(p)) {
+      List<?> unknownList = langFileConfig.getList(p);
+
+      ArrayList<String> stringList = new ArrayList(unknownList.size());
+      Iterator it = unknownList.iterator();
+
+      while(it.hasNext()) {
+        Object obj = it.next();
+        if (obj instanceof String) {
+          stringList.add((String) ((String) obj).replace("&", "§"));
+        } else {
+          if (!(obj instanceof Double) && !(obj instanceof Integer) && !(obj instanceof Boolean)) {
+            throw new InvalidConfigurationException("'" + langFileConfig.getName() + "' at path: '" + p + "' is not a string list");
+          }
+
+          stringList.add(obj.toString());
+        }
+      }
+
+      return (String[])stringList.toArray(new String[0]);
+    } else if (langFileConfig.contains(p)) {
+      throw new InvalidConfigurationException("'" + langFileConfig.getName() + "' at path: '" + p + "' is not a list");
+    } else {
+      langFileConfig.set(p, defaultList);
+      return defaultList;
+    }
+  }
+
   private MultiVersionSound getSound(String p, MultiVersionSound defaultSound) throws InvalidConfigurationException {
     try{
-      MultiVersionSound mvSound = MultiVersionSound.valueOf(langFileConfig.getString(p));
-      return mvSound;
+      return MultiVersionSound.valueOf(langFileConfig.getString(p));
     }catch (IllegalArgumentException e){
       throw new InvalidConfigurationException("'Language.yml' the value specified in " + p + "is not a sound", e);
     }

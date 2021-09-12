@@ -7,6 +7,9 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class ConfigFile {
 
@@ -77,6 +80,28 @@ public class ConfigFile {
     }else {
       config.set(p, defaultString);
       return defaultString;
+    }
+  }
+
+  public String[] getStringList(String p, String[] defaultList) throws InvalidConfigurationException {
+    if (config.isList(p)) {
+      List<?> unknownList = config.getList(p);
+      ArrayList<String> stringList = new ArrayList<>(unknownList.size());
+      for (Object obj : unknownList) {
+        if (obj instanceof String) {
+          stringList.add((String) obj);
+        } else if (obj instanceof Double || obj instanceof Integer || obj instanceof Boolean) {
+          stringList.add(obj.toString());
+        } else {
+          throw new InvalidConfigurationException("'" + configFile.getName() + "' at path: '" + p +"' is not a string list");
+        }
+      }
+      return stringList.toArray(new String[0]);
+    } else if (config.contains(p)) {
+      throw new InvalidConfigurationException("'" + configFile.getName() + "' at path: '" + p +"' is not a list");
+    } else {
+      config.set(p, defaultList);
+      return defaultList;
     }
   }
 
