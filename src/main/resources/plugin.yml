@@ -1,0 +1,4 @@
+name: PluginName
+version: ${project.version}
+main: net.coraldev.pluginname.PluginName
+api-version: 1.16
