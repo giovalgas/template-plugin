@@ -2,8 +2,3 @@ name: TemplatePlugin
 version: ${project.version}
 main: me.giodev.templateplugin.TemplatePlugin
 api-version: 1.16
-
-commands:
-  tpcommand:
-    description: "Template Command"
-    usage: /tpcommand
