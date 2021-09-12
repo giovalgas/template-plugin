@@ -1,3 +1,6 @@
 messages:
   message-prefix: "&c[&6TemplatePlugin&c] "
   hello-world: "&aHello World!"
+
+sounds:
+  test-sound: CLICK
