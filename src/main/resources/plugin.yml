@@ -1,4 +1,4 @@
-name: PluginName
+name: TemplatePlugin
 version: ${project.version}
-main: net.coraldev.pluginname.PluginName
+main: me.giodev.templateplugin.TemplatePlugin
 api-version: 1.16

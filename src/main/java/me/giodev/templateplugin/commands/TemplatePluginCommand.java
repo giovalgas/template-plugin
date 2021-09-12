@@ -22,7 +22,7 @@ public class TemplatePluginCommand implements @Nullable CommandExecutor {
 
     if(sender instanceof Player){
 
-      Bukkit.getConsoleSender().sendMessage(plugin.getConfigManager().getConsolePrefix() + " It's working!!!");
+      plugin.getLog().info("Test command working!");
 
       Player player = (Player) sender;
 
