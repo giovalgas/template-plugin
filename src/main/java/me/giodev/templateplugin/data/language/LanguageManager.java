@@ -20,6 +20,7 @@ public class LanguageManager {
   //Messages
   private String helloWorld;
   private String chatPrefix;
+  private String noPermission;
 
   //Sounds
   private MultiVersionSound testSound;
@@ -49,8 +50,9 @@ public class LanguageManager {
 
   private void loadValues() throws InvalidConfigurationException {
     //Messages
-    this.helloWorld = getString(LanguageKeys.HELLO_WORLD, LanguageDefaults.HELLO_WORLD);
     this.chatPrefix = getString(LanguageKeys.MESSAGE_PREFIX, LanguageDefaults.MESSAGE_PREFIX);
+    this.helloWorld = chatPrefix + getString(LanguageKeys.HELLO_WORLD, LanguageDefaults.HELLO_WORLD);
+    this.noPermission = chatPrefix + getString(LanguageKeys.NO_PERMISSION, LanguageDefaults.NO_PERMISSION);
 
     //Sounds
     this.testSound = getSound(LanguageKeys.TEST_SOUND, LanguageDefaults.TEST_SOUND);
@@ -108,6 +110,10 @@ public class LanguageManager {
 
   public String getHelloWorld() {
     return helloWorld;
+  }
+
+  public String getNoPermission() {
+    return noPermission;
   }
 
   public String getChatPrefix() {

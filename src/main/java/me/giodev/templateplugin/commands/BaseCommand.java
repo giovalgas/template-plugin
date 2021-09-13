@@ -24,11 +24,22 @@ public abstract class BaseCommand implements TabExecutor, CommandExecutor {
   @Override
   public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
 
-    if(!sender.hasPermission(getPermission())) return true;
+    if(!sender.hasPermission(getPermission())) {
+      sender.sendMessage(plugin.getLanguageManager().getNoPermission());
+      return true;
+    }
 
     if(!(isPlayerOnly()) || sender instanceof Player) {
       if(args.length > 0 && subCommands.get(args[0].toUpperCase()) != null) {
-        subCommands.get(args[0].toUpperCase()).executeCommand(sender, args, plugin);
+
+        SubCommand cmd = subCommands.get(args[0].toUpperCase());
+
+        if(sender.hasPermission(cmd.getPermission())) {
+          cmd.executeCommand(sender, args, plugin);
+        }else{
+          sender.sendMessage(plugin.getLanguageManager().getNoPermission());
+        }
+
       }else{
         executeStockSubCommand(sender);
       }
