@@ -8,6 +8,6 @@ public class LanguageKeys {
   public static final String NO_PERMISSION = "messages.no-permission";
 
   //Sounds
-  public static final String TEST_SOUND = "sounds.test-sound";
+  public static final String CLICK_SOUND = "sounds.test-sound";
 
 }

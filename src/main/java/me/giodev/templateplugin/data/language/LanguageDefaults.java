@@ -11,6 +11,6 @@ public class LanguageDefaults {
   public static final String NO_PERMISSION = MESSAGE_PREFIX + ChatColor.RED + "You don't have the permission needed to execute that command.";
 
   //sounds
-  public static final MultiVersionSound TEST_SOUND = MultiVersionSound.CLICK;
+  public static final MultiVersionSound CLICK_SOUND = MultiVersionSound.CLICK;
 
 }

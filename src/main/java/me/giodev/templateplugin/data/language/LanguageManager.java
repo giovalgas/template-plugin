@@ -23,7 +23,7 @@ public class LanguageManager {
   private String noPermission;
 
   //Sounds
-  private MultiVersionSound testSound;
+  private MultiVersionSound clickSound;
 
   public LanguageManager(TemplatePlugin plugin) throws InvalidConfigurationException {
     this.plugin = plugin;
@@ -55,7 +55,7 @@ public class LanguageManager {
     this.noPermission = chatPrefix + getString(LanguageKeys.NO_PERMISSION, LanguageDefaults.NO_PERMISSION);
 
     //Sounds
-    this.testSound = getSound(LanguageKeys.TEST_SOUND, LanguageDefaults.TEST_SOUND);
+    this.clickSound = getSound(LanguageKeys.CLICK_SOUND, LanguageDefaults.CLICK_SOUND);
 
   }
 
@@ -120,8 +120,8 @@ public class LanguageManager {
     return chatPrefix;
   }
 
-  public MultiVersionSound getTestSound(){
-    return testSound;
+  public MultiVersionSound getClickSound(){
+    return clickSound;
   }
 
 }

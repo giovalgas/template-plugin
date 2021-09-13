@@ -4,8 +4,10 @@ import me.giodev.templateplugin.commands.BaseCommand;
 import me.giodev.templateplugin.commands.templatecommand.TemplatePluginCommand;
 import me.giodev.templateplugin.data.config.ConfigManager;
 import me.giodev.templateplugin.data.language.LanguageManager;
+import me.giodev.templateplugin.listeners.GUIClickListener;
 import me.giodev.templateplugin.utils.LoggerUtil;
 import org.bukkit.configuration.InvalidConfigurationException;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -25,8 +27,14 @@ public final class TemplatePlugin extends JavaPlugin {
 
     //Commands & Events
     loadCommands();
+    loadEvents();
 
     log.info("Plugin fully started!");
+  }
+
+  private void loadEvents() {
+    PluginManager pm = getServer().getPluginManager();
+    pm.registerEvents(new GUIClickListener(this), this);
   }
 
   private void loadCommands() {
