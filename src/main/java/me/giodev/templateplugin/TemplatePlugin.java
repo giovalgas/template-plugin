@@ -1,7 +1,7 @@
 package me.giodev.templateplugin;
 
 import me.giodev.templateplugin.commands.BaseCommand;
-import me.giodev.templateplugin.commands.templatecommand.TemplatePluginCommand;
+import me.giodev.templateplugin.commands.examplecommand.ExampleCommand;
 import me.giodev.templateplugin.data.config.ConfigManager;
 import me.giodev.templateplugin.data.language.LanguageManager;
 import me.giodev.templateplugin.listeners.GUIClickListener;
@@ -37,7 +37,7 @@ public final class TemplatePlugin extends JavaPlugin {
   }
 
   private void loadCommands() {
-    loadCommand(new TemplatePluginCommand(this));
+    loadCommand(new ExampleCommand(this));
   }
 
   private void loadCommand(BaseCommand command) {

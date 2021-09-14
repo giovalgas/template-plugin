@@ -1,19 +1,19 @@
-package me.giodev.templateplugin.commands.templatecommand;
+package me.giodev.templateplugin.commands.examplecommand;
 
 import me.giodev.templateplugin.TemplatePlugin;
 import me.giodev.templateplugin.commands.BaseCommand;
-import me.giodev.templateplugin.commands.templatecommand.subcommands.TestSubCommand;
+import me.giodev.templateplugin.commands.examplecommand.subcommands.ExampleSubCommand;
 import me.giodev.templateplugin.data.permissions.Permission;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 import java.util.List;
 
-public class TemplatePluginCommand extends BaseCommand {
+public class ExampleCommand extends BaseCommand {
 
-  public TemplatePluginCommand(TemplatePlugin plugin) {
+  public ExampleCommand(TemplatePlugin plugin) {
     super(plugin);
-    subCommands.put("TEST", new TestSubCommand());
+    subCommands.put("TEST", new ExampleSubCommand());
   }
 
 
@@ -29,12 +29,12 @@ public class TemplatePluginCommand extends BaseCommand {
 
   @Override
   public @NotNull String getName() {
-    return "tpcommand";
+    return "excommand";
   }
 
 
   @Override
-  public @NotNull List<String> getAliases() { return Arrays.asList(new String[]{"tpcmd"}.clone()); }
+  public @NotNull List<String> getAliases() { return Arrays.asList(new String[]{"excmd"}.clone()); }
 
   @Override
   public boolean isPlayerOnly() {

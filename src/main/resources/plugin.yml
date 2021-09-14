@@ -3,7 +3,7 @@ version: ${project.version}
 main: me.giodev.templateplugin.TemplatePlugin
 api-version: 1.16
 commands:
-  tpcommand:
-    aliases: ["tpcmd"]
+  excommand:
+    aliases: ["excmd"]
     usage: "/tpcommand <args>"
-    description: "Template command"
+    description: "Example command"

@@ -8,9 +8,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class TestMenu extends BaseGUI {
+public class ExampleMenu extends BaseGUI {
 
-  public TestMenu(Player player) {
+  public ExampleMenu(Player player) {
     super(player);
   }
 
@@ -37,7 +37,7 @@ public class TestMenu extends BaseGUI {
 
   @Override
   public String getName() {
-    return "Test menu";
+    return "Example menu";
   }
 
   @Override
