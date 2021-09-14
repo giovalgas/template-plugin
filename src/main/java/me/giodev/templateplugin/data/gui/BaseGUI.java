@@ -25,8 +25,8 @@ public abstract class BaseGUI implements InventoryHolder {
 
   }
 
-  public void fillInventory() {
-    for(int i = 0; i < getSize(); i++) {
+  public void fillInventory(int startingIndex, int endingIndex) {
+    for(int i = startingIndex; i < endingIndex; i++) {
       if(inventory.getItem(i) == null) {
         inventory.setItem(i, new ItemStack(Material.BLACK_STAINED_GLASS_PANE)); // Change it later to XMaterial
       }
@@ -37,7 +37,7 @@ public abstract class BaseGUI implements InventoryHolder {
 
   public abstract void setupInventoryItems();
 
-  public abstract String getName();
+  public abstract @NotNull String getName();
 
   public abstract int getSize();
 

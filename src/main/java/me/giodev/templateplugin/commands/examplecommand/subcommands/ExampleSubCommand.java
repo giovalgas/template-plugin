@@ -3,6 +3,7 @@ package me.giodev.templateplugin.commands.examplecommand.subcommands;
 import me.giodev.templateplugin.TemplatePlugin;
 import me.giodev.templateplugin.commands.SubCommand;
 import me.giodev.templateplugin.data.gui.menus.ExampleMenu;
+import me.giodev.templateplugin.data.gui.menus.ExamplePaginatedMenu;
 import me.giodev.templateplugin.data.permissions.Permission;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -15,7 +16,9 @@ public class ExampleSubCommand implements SubCommand {
     sender.sendMessage(plugin.getLanguageManager().getHelloWorld());
 
     Player player = (Player) sender;
-    new ExampleMenu(player).open();
+    //new ExampleMenu(player).open();
+
+    new ExamplePaginatedMenu(player).open();
 
     if(sender instanceof Player){
       plugin.getLanguageManager().getClickSound().playSound((Player) sender);

@@ -7,6 +7,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 public class ExampleMenu extends BaseGUI {
 
@@ -32,11 +33,11 @@ public class ExampleMenu extends BaseGUI {
   @Override
   public void setupInventoryItems() {
     inventory.setItem(0, new GUIButton(new ItemStack(Material.COAL_BLOCK), "TEST").getItemStack());
-    fillInventory();
+    fillInventory(0, getSize());
   }
 
   @Override
-  public String getName() {
+  public @NotNull String getName() {
     return "Example menu";
   }
 
