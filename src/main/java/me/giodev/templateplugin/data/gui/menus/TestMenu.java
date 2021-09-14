@@ -1,8 +1,12 @@
 package me.giodev.templateplugin.data.gui.menus;
 
+import de.tr7zw.changeme.nbtapi.NBTItem;
 import me.giodev.templateplugin.data.gui.BaseGUI;
+import me.giodev.templateplugin.data.gui.GUIButton;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class TestMenu extends BaseGUI {
 
@@ -12,11 +16,22 @@ public class TestMenu extends BaseGUI {
 
   @Override
   public void handleClick(InventoryClickEvent event) {
-    player.sendMessage("Testing");
+    NBTItem nbtItem = new NBTItem(event.getCurrentItem());
+
+    if(nbtItem.hasKey(GUIButton.IDENTIFIER_KEY)) {
+      switch(nbtItem.getString(GUIButton.IDENTIFIER_KEY)) {
+        case "TEST":
+          player.sendMessage("BTN = TEST");
+          break;
+      }
+    }
+    else player.sendMessage("BTN = NULL");
+
   }
 
   @Override
   public void setupInventoryItems() {
+    inventory.setItem(0, new GUIButton(new ItemStack(Material.COAL_BLOCK), "TEST").getItemStack());
     fillInventory();
   }
 

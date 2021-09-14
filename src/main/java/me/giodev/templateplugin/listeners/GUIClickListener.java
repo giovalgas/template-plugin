@@ -1,6 +1,5 @@
 package me.giodev.templateplugin.listeners;
 
-import me.giodev.multiversion.MultiVersionSound;
 import me.giodev.templateplugin.TemplatePlugin;
 import me.giodev.templateplugin.data.gui.BaseGUI;
 import org.bukkit.entity.Player;

@@ -19,7 +19,6 @@ public final class TemplatePlugin extends JavaPlugin {
 
   @Override
   public void onEnable(){
-
     //Load config, language & logger
     loadConfig();
     loadLang();
