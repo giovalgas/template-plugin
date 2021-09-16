@@ -1,5 +1,6 @@
 package me.giodev.templateplugin.data.gui;
 
+import me.giodev.multiversion.XMaterial;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -28,7 +29,7 @@ public abstract class BaseGUI implements InventoryHolder {
   public void fillInventory(int startingIndex, int endingIndex) {
     for(int i = startingIndex; i < endingIndex; i++) {
       if(inventory.getItem(i) == null) {
-        inventory.setItem(i, new ItemStack(Material.BLACK_STAINED_GLASS_PANE)); // Change it later to XMaterial
+        inventory.setItem(i, new ItemStack(XMaterial.BLACK_STAINED_GLASS_PANE.parseMaterial()));
       }
     }
   }

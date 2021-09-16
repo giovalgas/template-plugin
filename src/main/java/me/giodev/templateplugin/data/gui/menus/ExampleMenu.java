@@ -1,6 +1,7 @@
 package me.giodev.templateplugin.data.gui.menus;
 
 import de.tr7zw.changeme.nbtapi.NBTItem;
+import me.giodev.multiversion.XMaterial;
 import me.giodev.templateplugin.data.gui.BaseGUI;
 import me.giodev.templateplugin.data.gui.GUIButton;
 import org.bukkit.Material;
@@ -32,7 +33,7 @@ public class ExampleMenu extends BaseGUI {
 
   @Override
   public void setupInventoryItems() {
-    inventory.setItem(0, new GUIButton(new ItemStack(Material.COAL_BLOCK), "TEST").getItemStack());
+    inventory.setItem(0, new GUIButton(new ItemStack(XMaterial.COAL_BLOCK.parseMaterial()), "TEST").getItemStack());
     fillInventory(0, getSize());
   }
 

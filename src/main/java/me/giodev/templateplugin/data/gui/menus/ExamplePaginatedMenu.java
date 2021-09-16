@@ -1,6 +1,7 @@
 package me.giodev.templateplugin.data.gui.menus;
 
 import de.tr7zw.changeme.nbtapi.NBTItem;
+import me.giodev.multiversion.XMaterial;
 import me.giodev.templateplugin.data.gui.GUIButton;
 import me.giodev.templateplugin.data.gui.PaginatedGUI;
 import org.bukkit.Material;
@@ -36,8 +37,8 @@ public class ExamplePaginatedMenu extends PaginatedGUI {
 
   @Override
   public void setupInventoryItems() {
-    inventory.setItem(47, new GUIButton(new ItemStack(Material.STONE_BUTTON), "PREVIOUS_PAGE").getItemStack());
-    inventory.setItem(51, new GUIButton(new ItemStack(Material.STONE_BUTTON), "NEXT_PAGE").getItemStack());
+    inventory.setItem(47, new GUIButton(new ItemStack(XMaterial.STONE_BUTTON.parseMaterial()), "PREVIOUS_PAGE").getItemStack());
+    inventory.setItem(51, new GUIButton(new ItemStack(XMaterial.STONE_BUTTON.parseMaterial()), "NEXT_PAGE").getItemStack());
     fillInventory(45, getSize());
   }
 
