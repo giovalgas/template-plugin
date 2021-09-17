@@ -263,7 +263,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@giovalgas](https://twitter.com/giovalgas) - giovalgascom@gmail.com
+Giovani Valgas - [@giovalgas](https://twitter.com/giovalgas) - giovalgascom@gmail.com
 
 Project Link: [https://github.com/giovalgas/TemplatePlugin](https://github.com/giovalgas/TemplatePlugin)
 
