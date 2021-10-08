@@ -1,6 +1,6 @@
 package me.giodev.templateplugin.data.language;
 
-import me.giodev.multiversion.MultiVersionSound;
+import com.cryptomorin.xseries.XSound;
 import org.bukkit.ChatColor;
 
 public class LanguageDefaults {
@@ -11,6 +11,6 @@ public class LanguageDefaults {
   public static final String NO_PERMISSION = MESSAGE_PREFIX + ChatColor.RED + "You don't have the permission needed to execute that command.";
 
   //sounds
-  public static final MultiVersionSound CLICK_SOUND = MultiVersionSound.CLICK;
+  public static final XSound CLICK_SOUND = XSound.UI_BUTTON_CLICK;
 
 }

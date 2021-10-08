@@ -1,10 +1,9 @@
 package me.giodev.templateplugin.data.gui.menus;
 
+import com.cryptomorin.xseries.XMaterial;
 import de.tr7zw.changeme.nbtapi.NBTItem;
-import me.giodev.multiversion.XMaterial;
 import me.giodev.templateplugin.data.gui.BaseGUI;
 import me.giodev.templateplugin.data.gui.GUIButton;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;

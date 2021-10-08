@@ -1,6 +1,6 @@
 package me.giodev.templateplugin.data.language;
 
-import me.giodev.multiversion.MultiVersionSound;
+import com.cryptomorin.xseries.XSound;
 import me.giodev.templateplugin.TemplatePlugin;
 import me.giodev.templateplugin.utils.FileManager;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -14,8 +14,8 @@ import java.util.List;
 
 public class LanguageManager {
 
-  TemplatePlugin plugin;
-  YamlConfiguration langFileConfig;
+  private TemplatePlugin plugin;
+  private YamlConfiguration langFileConfig;
 
   //Messages
   private String helloWorld;
@@ -23,7 +23,7 @@ public class LanguageManager {
   private String noPermission;
 
   //Sounds
-  private MultiVersionSound clickSound;
+  private XSound clickSound;
 
   public LanguageManager(TemplatePlugin plugin) throws InvalidConfigurationException {
     this.plugin = plugin;
@@ -100,9 +100,9 @@ public class LanguageManager {
     }
   }
 
-  private MultiVersionSound getSound(String p, MultiVersionSound defaultSound) throws InvalidConfigurationException {
+  private XSound getSound(String p, XSound defaultSound) throws InvalidConfigurationException {
     try{
-      return MultiVersionSound.valueOf(langFileConfig.getString(p));
+      return XSound.valueOf(langFileConfig.getString(p));
     }catch (IllegalArgumentException e){
       throw new InvalidConfigurationException("'Language.yml' the value specified in " + p + "is not a sound", e);
     }
@@ -120,7 +120,7 @@ public class LanguageManager {
     return chatPrefix;
   }
 
-  public MultiVersionSound getClickSound(){
+  public XSound getClickSound(){
     return clickSound;
   }
 

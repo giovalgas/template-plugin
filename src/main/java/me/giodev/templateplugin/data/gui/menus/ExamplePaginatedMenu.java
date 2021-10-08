@@ -1,7 +1,7 @@
 package me.giodev.templateplugin.data.gui.menus;
 
+import com.cryptomorin.xseries.XMaterial;
 import de.tr7zw.changeme.nbtapi.NBTItem;
-import me.giodev.multiversion.XMaterial;
 import me.giodev.templateplugin.data.gui.GUIButton;
 import me.giodev.templateplugin.data.gui.PaginatedGUI;
 import org.bukkit.Material;

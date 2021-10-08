@@ -21,7 +21,7 @@ public class ExampleSubCommand implements SubCommand {
     new ExamplePaginatedMenu(player).open();
 
     if(sender instanceof Player){
-      plugin.getLanguageManager().getClickSound().playSound((Player) sender);
+      plugin.getLanguageManager().getClickSound().play((Player) sender);
     }
   }
 

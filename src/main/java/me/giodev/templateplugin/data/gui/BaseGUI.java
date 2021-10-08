@@ -1,8 +1,7 @@
 package me.giodev.templateplugin.data.gui;
 
-import me.giodev.multiversion.XMaterial;
+import com.cryptomorin.xseries.XMaterial;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
@@ -23,7 +22,6 @@ public abstract class BaseGUI implements InventoryHolder {
     inventory = Bukkit.createInventory(this, getSize(), getName());
     this.setupInventoryItems();
     player.openInventory(inventory);
-
   }
 
   public void fillInventory(int startingIndex, int endingIndex) {

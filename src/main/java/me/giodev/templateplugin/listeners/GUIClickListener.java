@@ -24,7 +24,7 @@ public class GUIClickListener implements Listener {
     if(holder instanceof BaseGUI) {
 
       event.setCancelled(true);
-      plugin.getLanguageManager().getClickSound().playSound((Player) event.getWhoClicked());
+      plugin.getLanguageManager().getClickSound().play((Player) event.getWhoClicked());
 
       if(event.getCurrentItem() == null) return;
 
