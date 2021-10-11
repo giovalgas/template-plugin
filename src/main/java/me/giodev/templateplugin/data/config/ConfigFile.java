@@ -4,6 +4,7 @@ import me.giodev.templateplugin.TemplatePlugin;
 import me.giodev.templateplugin.utils.FileManager;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +29,14 @@ public class ConfigFile {
       FileManager.loadResource(plugin, "config.yml");
     }
 
-    this.config = plugin.getConfig();
+    this.config = new YamlConfiguration();
+
+    try {
+      config.load(configFile);
+    } catch (IOException | InvalidConfigurationException e) {
+      e.printStackTrace();
+    }
+
   }
 
   public void save() throws IOException {
