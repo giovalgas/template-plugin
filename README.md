@@ -58,6 +58,7 @@ This project was built with:
 * [Java](https://java.com/pt-BR/)
 * [NBTItem API](https://www.spigotmc.org/resources/nbt-api.7939/)
 * [XSeries](https://github.com/CryptoMorin/XSeries/)
+* [Lombok](https://projectlombok.org/)
 
 
 <!-- GETTING STARTED -->
