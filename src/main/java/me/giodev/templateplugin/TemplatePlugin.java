@@ -1,5 +1,7 @@
 package me.giodev.templateplugin;
 
+import lombok.Getter;
+import lombok.SneakyThrows;
 import me.giodev.templateplugin.commands.BaseCommand;
 import me.giodev.templateplugin.commands.examplecommand.ExampleCommand;
 import me.giodev.templateplugin.data.config.ConfigManager;
@@ -10,15 +12,19 @@ import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-
+@Getter
 public final class TemplatePlugin extends JavaPlugin {
 
+  private static TemplatePlugin instance;
   private ConfigManager configManager;
   private LanguageManager languageManager;
   private LoggerUtil log;
 
   @Override
   public void onEnable(){
+
+    instance = this;
+
     //Load config, language & logger
     loadConfig();
     loadLang();
@@ -46,24 +52,14 @@ public final class TemplatePlugin extends JavaPlugin {
     getCommand(command.getName()).setAliases(command.getAliases());
   }
 
+  @SneakyThrows
   private void loadConfig(){
-    try {
-      this.configManager = new ConfigManager(this);
-    } catch (InvalidConfigurationException e) {
-      e.printStackTrace();
-    }
+    this.configManager = new ConfigManager(this);
   }
 
+  @SneakyThrows
   private void loadLang(){
-    try {
-      this.languageManager = new LanguageManager(this);
-    } catch (InvalidConfigurationException e) {
-      e.printStackTrace();
-    }
+    this.languageManager = new LanguageManager(this);
   }
-
-  public LoggerUtil getLog() { return log; }
-  public ConfigManager getConfigManager() { return configManager; }
-  public LanguageManager getLanguageManager() { return languageManager; }
 
 }

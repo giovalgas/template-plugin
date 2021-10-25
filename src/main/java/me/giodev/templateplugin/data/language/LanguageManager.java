@@ -1,6 +1,8 @@
 package me.giodev.templateplugin.data.language;
 
 import com.cryptomorin.xseries.XSound;
+import lombok.AccessLevel;
+import lombok.Getter;
 import me.giodev.templateplugin.TemplatePlugin;
 import me.giodev.templateplugin.utils.FileManager;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -12,10 +14,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+@Getter
 public class LanguageManager {
 
-  private TemplatePlugin plugin;
-  private YamlConfiguration langFileConfig;
+  private @Getter(value = AccessLevel.NONE) TemplatePlugin plugin;
+  private @Getter(value = AccessLevel.NONE) YamlConfiguration langFileConfig;
 
   //Messages
   private String helloWorld;
@@ -106,22 +109,6 @@ public class LanguageManager {
     }catch (IllegalArgumentException e){
       throw new InvalidConfigurationException("'Language.yml' the value specified in " + p + "is not a sound", e);
     }
-  }
-
-  public String getHelloWorld() {
-    return helloWorld;
-  }
-
-  public String getNoPermission() {
-    return noPermission;
-  }
-
-  public String getChatPrefix() {
-    return chatPrefix;
-  }
-
-  public XSound getClickSound(){
-    return clickSound;
   }
 
 }

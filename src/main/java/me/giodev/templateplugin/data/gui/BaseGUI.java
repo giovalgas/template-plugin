@@ -1,6 +1,7 @@
 package me.giodev.templateplugin.data.gui;
 
 import com.cryptomorin.xseries.XMaterial;
+import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -11,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 public abstract class BaseGUI implements InventoryHolder {
 
-  protected Inventory inventory;
+  protected @Getter Inventory inventory;
   protected Player player;
 
   public BaseGUI (Player player) {
@@ -40,8 +41,4 @@ public abstract class BaseGUI implements InventoryHolder {
 
   public abstract int getSize();
 
-  @Override
-  public @NotNull Inventory getInventory() {
-    return inventory;
-  }
 }

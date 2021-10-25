@@ -1,8 +1,10 @@
 package me.giodev.templateplugin.data.gui;
 
 import de.tr7zw.changeme.nbtapi.NBTItem;
+import lombok.Getter;
 import org.bukkit.inventory.ItemStack;
 
+@Getter
 public class GUIButton {
 
   public static final String IDENTIFIER_KEY = "BTN_IDENTIFIER";
@@ -16,14 +18,6 @@ public class GUIButton {
 
     this.itemStack = item.getItem();
     this.identifier = identifier;
-  }
-
-  public ItemStack getItemStack() {
-    return itemStack;
-  }
-
-  public String getIdentifier() {
-    return identifier;
   }
 
 }

@@ -1,12 +1,15 @@
 package me.giodev.templateplugin.data.config;
 
+import lombok.AccessLevel;
+import lombok.Getter;
 import me.giodev.templateplugin.TemplatePlugin;
 import org.bukkit.configuration.InvalidConfigurationException;
 
+@Getter
 public class ConfigManager {
 
   //Plugin
-  private final TemplatePlugin plugin;
+  private final @Getter(value = AccessLevel.NONE) TemplatePlugin plugin;
 
   //Config Values
   private String consolePrefix;
@@ -26,10 +29,6 @@ public class ConfigManager {
 
   public void reload() throws InvalidConfigurationException {
     load();
-  }
-
-  public String getConsolePrefix() {
-    return consolePrefix;
   }
 
 }

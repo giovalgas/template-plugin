@@ -14,9 +14,9 @@ import java.util.List;
 
 public class ConfigFile {
 
-  File configFile;
-  TemplatePlugin plugin;
-  FileConfiguration config;
+  private File configFile;
+  private TemplatePlugin plugin;
+  private FileConfiguration config;
 
   public ConfigFile(TemplatePlugin plugin){
     this.plugin = plugin;
