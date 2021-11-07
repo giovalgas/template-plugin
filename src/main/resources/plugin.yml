@@ -1,6 +1,6 @@
 name: TemplatePlugin
 version: ${project.version}
-main: me.giodev.templateplugin.TemplatePlugin
+main: dev.giovalgas.templateplugin.TemplatePlugin
 api-version: 1.16
 commands:
   excommand:
