@@ -14,7 +14,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 @Getter
 public final class TemplatePlugin extends JavaPlugin {
 
+  @Getter
   private static TemplatePlugin instance;
+
   private ConfigManager configManager;
   private LanguageManager languageManager;
   private LoggerUtil log;
