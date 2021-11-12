@@ -1,7 +1,7 @@
 package dev.giovalgas.templateplugin.commands.examplecommand.subcommands;
 
 import dev.giovalgas.templateplugin.TemplatePlugin;
-import dev.giovalgas.templateplugin.data.gui.menus.ExamplePaginatedMenu;
+import dev.giovalgas.templateplugin.gui.menus.ExamplePaginatedMenu;
 import dev.giovalgas.templateplugin.data.permissions.Permission;
 import dev.giovalgas.templateplugin.commands.SubCommand;
 import org.bukkit.command.CommandSender;

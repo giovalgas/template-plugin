@@ -1,4 +1,4 @@
-package dev.giovalgas.templateplugin.data.gui;
+package dev.giovalgas.templateplugin.gui;
 
 
 import org.bukkit.Bukkit;

@@ -1,9 +1,9 @@
-package dev.giovalgas.templateplugin.data.gui.menus;
+package dev.giovalgas.templateplugin.gui.menus;
 
 import com.cryptomorin.xseries.XMaterial;
 import de.tr7zw.changeme.nbtapi.NBTItem;
-import dev.giovalgas.templateplugin.data.gui.GUIButton;
-import dev.giovalgas.templateplugin.data.gui.PaginatedGUI;
+import dev.giovalgas.templateplugin.gui.GUIButton;
+import dev.giovalgas.templateplugin.gui.PaginatedGUI;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;

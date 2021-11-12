@@ -1,4 +1,4 @@
-package dev.giovalgas.templateplugin.data.gui;
+package dev.giovalgas.templateplugin.gui;
 
 import de.tr7zw.changeme.nbtapi.NBTItem;
 import lombok.Getter;

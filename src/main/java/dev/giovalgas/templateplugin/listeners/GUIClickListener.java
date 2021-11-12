@@ -1,6 +1,6 @@
 package dev.giovalgas.templateplugin.listeners;
 
-import dev.giovalgas.templateplugin.data.gui.BaseGUI;
+import dev.giovalgas.templateplugin.gui.BaseGUI;
 import dev.giovalgas.templateplugin.TemplatePlugin;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
