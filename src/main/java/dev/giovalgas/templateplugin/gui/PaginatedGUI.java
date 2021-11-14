@@ -46,7 +46,7 @@ public abstract class PaginatedGUI extends BaseGUI{
 
   public void setPage(int page) {
 
-    if(page >= 0 && !(page * getPageSize() + 1 >= getPageItems().size())) {
+    if(page >= 0 && !(page * getPageSize() >= getPageItems().size())) {
       this.page = page;
       open();
     }else {
