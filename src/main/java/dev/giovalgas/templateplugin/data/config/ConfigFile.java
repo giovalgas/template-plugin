@@ -2,6 +2,7 @@ package dev.giovalgas.templateplugin.data.config;
 
 import dev.giovalgas.templateplugin.TemplatePlugin;
 import dev.giovalgas.templateplugin.utils.FileManager;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -109,6 +110,14 @@ public class ConfigFile {
     } else {
       config.set(p, defaultList);
       return defaultList;
+    }
+  }
+
+  public ConfigurationSection getSection(String p) throws InvalidConfigurationException {
+    if (config.isConfigurationSection(p)) {
+      return config.getConfigurationSection(p);
+    } else {
+      throw new InvalidConfigurationException("'" + configFile.getName() + "' at path: '" + p +"' is either not a section or is non-existent");
     }
   }
 
