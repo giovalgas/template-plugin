@@ -1,13 +1,13 @@
 package dev.giovalgas.templateplugin;
 
-import dev.giovalgas.templateplugin.commands.BaseCommand;
-import dev.giovalgas.templateplugin.commands.examplecommand.ExampleCommand;
+import dev.giovalgas.templateplugin.command.BaseCommand;
+import dev.giovalgas.templateplugin.command.examplecommand.ExampleCommand;
 import dev.giovalgas.templateplugin.data.config.ConfigManager;
-import dev.giovalgas.templateplugin.listeners.GUIClickListener;
+import dev.giovalgas.templateplugin.listener.GUIClickListener;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import dev.giovalgas.templateplugin.data.language.LanguageManager;
-import dev.giovalgas.templateplugin.utils.LoggerUtil;
+import dev.giovalgas.templateplugin.util.LoggerUtil;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 

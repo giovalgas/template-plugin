@@ -1,4 +1,4 @@
-package dev.giovalgas.templateplugin.utils;
+package dev.giovalgas.templateplugin.util;
 
 import dev.giovalgas.templateplugin.TemplatePlugin;
 import org.bukkit.Bukkit;

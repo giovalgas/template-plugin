@@ -2,7 +2,7 @@ package dev.giovalgas.templateplugin.data.language;
 
 import com.cryptomorin.xseries.XSound;
 import dev.giovalgas.templateplugin.TemplatePlugin;
-import dev.giovalgas.templateplugin.utils.FileManager;
+import dev.giovalgas.templateplugin.util.FileManager;
 import lombok.AccessLevel;
 import lombok.Getter;
 import org.bukkit.configuration.InvalidConfigurationException;

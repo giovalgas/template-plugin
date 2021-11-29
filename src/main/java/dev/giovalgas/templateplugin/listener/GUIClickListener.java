@@ -1,4 +1,4 @@
-package dev.giovalgas.templateplugin.listeners;
+package dev.giovalgas.templateplugin.listener;
 
 import dev.giovalgas.templateplugin.gui.BaseGUI;
 import dev.giovalgas.templateplugin.TemplatePlugin;

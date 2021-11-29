@@ -1,7 +1,7 @@
-package dev.giovalgas.templateplugin.commands;
+package dev.giovalgas.templateplugin.command;
 
 import dev.giovalgas.templateplugin.TemplatePlugin;
-import dev.giovalgas.templateplugin.data.permissions.Permission;
+import dev.giovalgas.templateplugin.data.permission.Permission;
 import org.bukkit.command.*;
 
 import org.bukkit.entity.Player;

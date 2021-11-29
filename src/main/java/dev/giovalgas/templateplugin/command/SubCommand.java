@@ -1,4 +1,4 @@
-package dev.giovalgas.templateplugin.commands;
+package dev.giovalgas.templateplugin.command;
 
 
 import dev.giovalgas.templateplugin.TemplatePlugin;

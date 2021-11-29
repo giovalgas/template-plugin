@@ -1,4 +1,4 @@
-package dev.giovalgas.templateplugin.gui.menus;
+package dev.giovalgas.templateplugin.gui.menu;
 
 import com.cryptomorin.xseries.XMaterial;
 import de.tr7zw.changeme.nbtapi.NBTItem;

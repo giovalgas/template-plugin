@@ -1,4 +1,4 @@
-package dev.giovalgas.templateplugin.utils;
+package dev.giovalgas.templateplugin.util;
 
 import com.google.common.io.ByteStreams;
 import org.bukkit.plugin.Plugin;
@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.HashMap;
 
 public class FileManager {
 

@@ -1,7 +1,7 @@
 package dev.giovalgas.templateplugin.data.config;
 
 import dev.giovalgas.templateplugin.TemplatePlugin;
-import dev.giovalgas.templateplugin.utils.FileManager;
+import dev.giovalgas.templateplugin.util.FileManager;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;

@@ -1,9 +1,9 @@
-package dev.giovalgas.templateplugin.commands.examplecommand.subcommands;
+package dev.giovalgas.templateplugin.command.examplecommand.subcommands;
 
 import dev.giovalgas.templateplugin.TemplatePlugin;
-import dev.giovalgas.templateplugin.gui.menus.ExamplePaginatedMenu;
-import dev.giovalgas.templateplugin.data.permissions.Permission;
-import dev.giovalgas.templateplugin.commands.SubCommand;
+import dev.giovalgas.templateplugin.gui.menu.ExamplePaginatedMenu;
+import dev.giovalgas.templateplugin.data.permission.Permission;
+import dev.giovalgas.templateplugin.command.SubCommand;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;

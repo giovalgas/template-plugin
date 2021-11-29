@@ -1,4 +1,4 @@
-package dev.giovalgas.templateplugin.data.permissions;
+package dev.giovalgas.templateplugin.data.permission;
 
 public class Permission {
 

@@ -1,9 +1,9 @@
-package dev.giovalgas.templateplugin.commands.examplecommand;
+package dev.giovalgas.templateplugin.command.examplecommand;
 
-import dev.giovalgas.templateplugin.commands.BaseCommand;
+import dev.giovalgas.templateplugin.command.BaseCommand;
 import dev.giovalgas.templateplugin.TemplatePlugin;
-import dev.giovalgas.templateplugin.commands.examplecommand.subcommands.ExampleSubCommand;
-import dev.giovalgas.templateplugin.data.permissions.Permission;
+import dev.giovalgas.templateplugin.command.examplecommand.subcommands.ExampleSubCommand;
+import dev.giovalgas.templateplugin.data.permission.Permission;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
